@@ -1,5 +1,5 @@
 output "cluster_name" {
-  value = module.eks.cluster_id
+  value = module.eks.cluster_name
 }
 
 output "cluster_endpoint" {
@@ -7,5 +7,5 @@ output "cluster_endpoint" {
 }
 
 output "configure_kubectl" {
-  value = "aws eks update kubeconfig --name ${module.eks.cluster_id} --region ${var.region}"
+  value = "aws eks update kubeconfig --name ${module.eks.cluster_name} --region ${var.region}"
 }

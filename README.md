@@ -247,3 +247,5 @@ This repository demonstrates several core AWS and Kubernetes concepts:
 ## Summary
 
 This project builds a complete AWS EKS environment and deploys a simple containerized web app on top of it. It combines Terraform-managed infrastructure and Kubernetes application manifests in a clean and minimal setup that can be extended into a larger workload.
+
+![Nginx container running on EKS cluster exposed through Load Balancer](image.png)

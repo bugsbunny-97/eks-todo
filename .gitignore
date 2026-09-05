@@ -1,0 +1,28 @@
+# Terraform working directory and downloaded providers
+.terraform/
+
+# Terraform state and local locks
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+
+# Terraform variable files may contain credentials
+*.tfvars
+*.tfvars.json
+!terraform.tfvars.example
+
+# Terraform plans, crash logs, and overrides
+*.tfplan
+*.tfplan.json
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local environment and editor files
+.env
+.env.*
+.vscode/
+.idea/

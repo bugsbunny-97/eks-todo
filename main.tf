@@ -36,6 +36,7 @@ module "eks" {
 
     cluster_name    = var.cluster_name
     cluster_version = "1.33"
+    cluster_ip_family = "ipv4"
     vpc_id          = module.vpc.vpc_id
     subnet_ids     = module.vpc.public_subnets
     cluster_endpoint_public_access  = true
@@ -43,6 +44,7 @@ module "eks" {
     eks_managed_node_groups = {
         default = {
             instance_types = ["t3.small"]
+            iam_role_attach_cni_policy = true
             min_size       = 1
             max_size       = 2
             desired_size   = 2        
